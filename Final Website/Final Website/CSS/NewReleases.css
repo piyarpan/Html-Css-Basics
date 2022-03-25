@@ -1,0 +1,28 @@
+body{
+	font-family: sans-serif;
+}
+h1{
+	text-align: center;
+	color: #FFA500;
+	margin: 30px 0 50px;
+}
+.gallery{
+	margin: 10px 150px;
+}
+.gallery img{
+	width: 270px;
+	padding: 5px;
+	filter: grayscale(100%);
+	transition: 0.8s;
+}
+.gallery img:hover{
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+.next:hover, .before:hover, .close:hover{cursor: pointer;}
+.appear{
+	z-index: 5;
+	opacity: 1!important;
+}
+

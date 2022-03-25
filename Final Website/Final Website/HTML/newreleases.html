@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/NewReleases.css">
+
+
+	<style type="text/css">
+
+body {
+  background-image: url("../Images/gradientw.jpg");
+  min-height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.navbar{
+	filter: opacity(90%); 
+}
+.navbar:hover{
+	filter: opacity(100%);
+}
+
+
+
+.text {
+	background-image: default;
+	padding: 2% ;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	right: 5%;
+	bottom: 10%;
+}
+div>p>a>button.btn{
+	padding: 1% 7%;
+}
+#heading{
+	padding: 2% 0%;
+}
+div>p>a{
+	padding: 0px 10px;
+}
+
+
+</style>
+
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li class="currentpage"> <a href="HTML/newreleases.html">New Releases</a></li>
+			<li><a href="Deals.html">Deals</a></li>
+			<li><a href="History.html">History</a></li>
+			<li><a href="Login.html">Log in</a></li>
+		</ul>
+	</nav>
+
+<div class="gallery">
+	<a href="https://www.nike.com/au/t/sportswear-woven-jacket-hQWbVV">
+	<img src="../Images/newreleases/Capture1.png" onclick="imgAppear(0)"></a>
+	<a href="https://store.nike.com/au/en_gb/pd/air-jordan-1-retro-high-og-shoe/pid-12546012/pgid-11107614">	
+	<img src="../Images/newreleases/Capture3.png" onclick="imgAppear(1)"></a>
+	<a href="https://www.nike.com/au/t/lebron-16-basketball-shoe-nZkSpV/AO2588-006">
+	<img src="../Images/newreleases/Capture7.png" onclick="imgAppear(2)"></a>
+	<a href="https://www.nike.com/au/t/jordan-jumpman-air-lightweight-fleece-sweatshirt-FnThqP">
+	<img src="../Images/newreleases/Capture8.png" onclick="imgAppear(3)"></a>
+	<a href="https://www.nike.com/au/t/sportswear-n98-knit-warm-up-jacket-7QFT9G/AR2244-272">
+	<img src="../Images/newreleases/N98.png" onclick="imgAppear(4)"></a>
+	<a href="https://www.nike.com/au/t/phantom-vision-academy-dynamic-fit-mg-multi-ground-football-boot-83FX6m">
+	<img src="../Images/newreleases/Capture4.png" onclick="imgAppear(5)"></a>
+	<a href="https://store.nike.com/au/en_gb/product/custom-nike-kd12-by-you/?piid=10000485&pbid=986521134">
+	<img src="../Images/newreleases/Capture9.png" onclick="imgAppear(6)"></a>
+	<a href="https://www.nike.com/au/t/jordan-proto-max-720-shoe-JKTnFS">
+	<img src="../Images/newreleases/Capture2.png" onclick="imgAppear(7)"></a>
+	<a href="https://www.nike.com/au/t/sportswear-nsw-french-terry-crew-LQdcjH/AR1622-741?vst=french+terry+crew">
+	<img src="../Images/newreleases/react.png" onclick="imgAppear(8)"></a>
+	<a href="https://www.nike.com/au/t/zoom-2k-shoe-Q0TvRx/AO0269-004">
+	<img src="../Images/newreleases/Capture5.png" onclick="imgAppear(9)"></a>
+	<a href="https://www.nike.com/au/t/acg-long-sleeve-top-xxlMqv">
+	<img src="../Images/newreleases/Capture6.png" onclick="imgAppear(10)"></a>
+	<a href="https://www.nike.com/au/t/sportswear-windrunner-jacket-Jk829M">
+	<img src="../Images/newreleases/Capture10.png" onclick="imgAppear(11)"></a>
+</div>
+
+<script type="text/javascript">
+	var pic=["Images/1small.jpg","Images/2small.jpg","Images/3small.jpg","Images/4small.jpg","Images/5small.jpg","Images/6small.jpg","Images/7small.jpg"];
+
+	function imgAppear(i){
+		var imgNo=i;
+		document.getElementById("overlay").classList.add("appear");
+		document.getElementById("overlay-img").src=pic[imgNo];
+		document.getElementById("next").onclick=function(){
+			imgNo++;
+			if(imgNo>6){imgNo=0;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+		document.getElementById("before").onclick=function(){
+			imgNo--;
+			if(imgNo<0){imgNo=6;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+	}
+
+	function imgDisappear(){
+		document.getElementById("overlay").classList.remove("appear");;
+	}
+</script>
+
+
+
+
+      
+    </div>
+</div>
+
+
+   
+
+
+</body>
+</html>

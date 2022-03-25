@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-signup.css">
+	<style type="text/css">
+
+body {
+  background-image: url("../images/wallpaper1.png");
+  min-height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.navbar{
+	filter: opacity(80%);
+}
+.navbar:hover{
+	filter: opacity(100%);
+}
+
+#footer {
+overflow: hidden;
+width: 1000px;
+height: 200px;
+margin: 0 auto;
+padding: 40px 0 15px 0;
+}
+
+#footer p {
+margin: 0;
+padding-top: 20px;
+line-height: normal;
+text-align: center;
+ color: black;
+  text-shadow: 2px 2px 4px #ffffff;
+font-size: 20px;
+}
+
+
+</style>
+
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li> <a href="newreleases.html">New Releases</a></li>
+			<li><a href="Deals.html">Deals</a></li>
+			<li><a href="History.html">History</a></li>
+			<li class="currentpage"><a href="Login.html">Log in</a></li>
+		</ul>
+	</nav>
+
+
+<div class="login-page">
+   <div class="form">
+    <form class="register">
+      <input type="text" placeholder="username"/>
+        <input type="text" placeholder="email id"/>
+      <input type="text" placeholder="password"/>
+    
+      <button>create</button>
+      <p class="message">Already Registered? <a href="#">Login</a>
+      </p>
+    </form>
+  
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not Registered? <a href="#">Register</a></p>
+  </form>
+     </div>
+   </div>
+
+   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
+   <script>
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+      });
+  </script>
+
+
+ 
+<div id="footer"> 
+ <ul>
+            <a href="https://www.facebook.com/nike/" target="_blank" class="trans"><img src="../Images/Social/facebook.png" /></a>
+            <a href="https://www.instagram.com/nike/?hl=en" target="_blank" class="trans"><img src="../Images/Social/instagram.png"/></a>
+            <a href="https://www.youtube.com/user/nike" target="_blank" class="trans"><img src="../Images/Social/youtube.png" /></a>
+            <a href="https://twitter.com/Nike?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="trans"><img src="../Images/Social/twitter.png" /></a>
+            </div>
+            
+            
+        </ul> 
+
+
+
+</body>
+</html>

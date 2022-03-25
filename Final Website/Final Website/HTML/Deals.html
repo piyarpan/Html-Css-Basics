@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Deals.css">
+
+
+	<style type="text/css">
+
+body {
+  background-image: url("../Images/gradientW2.jpg");
+  min-height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+.navbar{
+	filter: opacity(90%); 
+}
+.navbar:hover{
+	filter: opacity(100%);
+}
+
+
+
+.text {
+	background-image: default;
+	padding: 2% ;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	right: 5%;
+	bottom: 10%;
+}
+div>p>a>button.btn{
+	padding: 1% 7%;
+}
+#heading{
+	padding: 2% 0%;
+}
+div>p>a{
+	padding: 0px 10px;
+}
+
+
+</style>
+
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="newreleases.html">New Releases</a></li>
+			<li class="currentpage"><a href="Deals.html">Deals</a></li>
+			<li><a href="History.html">History</a></li>
+			<li><a href="Login.html">Log in</a></li>
+		</ul>
+	</nav>
+
+<div class="gallery">
+	<a href="https://www.nike.com/au/t/air-vapormax-flyknit-utility-shoe-ERTB347o">
+	<img src="../Images/Deals/Img1.png" onclick="imgAppear(0)"></a>
+	<a href="https://www.nike.com/au/t/paul-george-icon-edition-swingman-nba-connected-jersey-Lb1NDx/864497-403">	
+	<img src="../Images/Deals/Img2.png" onclick="imgAppear(1)"></a>
+	<a href="https://www.nike.com/au/t/sportswear-cheyenne-3-solid-backpack-knTPPbPk/BA5230-344">
+	<img src="../Images/Deals/Img3.png" onclick="imgAppear(2)"></a>
+	<a href="https://www.nike.com/au/t/air-force-1-07-lv8-style-shoe-HXGpd3/AQ0117-800">
+	<img src="../Images/Deals/Img4.png" onclick="imgAppear(3)"></a>
+	<a href="https://www.nike.com/au/t/air-vapormax-shoe-ZwTJm0Lr/AH9046-400">
+	<img src="../Images/Deals/Img5.png" onclick="imgAppear(4)">
+	<a href="https://www.nike.com/au/t/air-max-97-shoe-ERTB34wo/921733-802">
+	<img src="../Images/Deals/Img6.png" onclick="imgAppear(5)"></a>
+	<a href="https://www.nike.com/au/t/air-max-1-print-older-shoe-Z3lgqM">
+	<img src="../Images/Deals/Img7.png" onclick="imgAppear(6)"></a>
+	<a href="https://www.nike.com/au/t/sportswear-trousers-sxP168/AR2246-711">
+	<img src="../Images/Deals/Img8.png" onclick="imgAppear(7)"></a>
+	<a href="https://www.nike.com/au/t/dri-fit-therma-older-training-hoodie-KZ5TTc">
+	<img src="../Images/Deals/Img9.png" onclick="imgAppear(8)"></a>
+	<a href="https://www.nike.com/au/t/jordan-aj1-jester-xx-shoe-rJTGXdbk">
+	<img src="../Images/Deals/Img10.png" onclick="imgAppear(9)"></a>
+	<a href="https://www.nike.com/au/t/sfs-responder-backpack-VrTW92n8">
+	<img src="../Images/Deals/Img11.png" onclick="imgAppear(10)"></a>
+	<a href="https://www.nike.com/au/t/dri-fit-long-sleeve-yoga-training-top-knmM67/AQ0199-850">
+	<img src="../Images/Deals/Img12.png" onclick="imgAppear(11)"></a>
+</div>
+
+<script type="text/javascript">
+	var pic=["Images/1small.jpg","Images/2small.jpg","Images/3small.jpg","Images/4small.jpg","Images/5small.jpg","Images/6small.jpg","Images/7small.jpg"];
+
+	function imgAppear(i){
+		var imgNo=i;
+		document.getElementById("overlay").classList.add("appear");
+		document.getElementById("overlay-img").src=pic[imgNo];
+		document.getElementById("next").onclick=function(){
+			imgNo++;
+			if(imgNo>6){imgNo=0;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+		document.getElementById("before").onclick=function(){
+			imgNo--;
+			if(imgNo<0){imgNo=6;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+	}
+
+	function imgDisappear(){
+		document.getElementById("overlay").classList.remove("appear");;
+	}
+</script>
+
+
+</div>
+</div>
+
+
+</body>
+</html>

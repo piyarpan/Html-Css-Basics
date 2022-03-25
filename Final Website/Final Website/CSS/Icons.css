@@ -1,0 +1,185 @@
+/* Best viewed in full-screen mode! */
+/* Variables */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  color: #222;
+  line-height: 1.35;
+  background: #383737;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+}
+
+p {
+  margin-bottom: 0.3em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn {
+  background: #222;
+  color: #fff;
+  font-weight: 900;
+  padding: 0.5em 0.8em;
+  border-radius: 4%;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background: #999;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Story styles */
+.story {
+  background-image:url("../Images/WhiteI.jpg");
+  margin: 1em 0.8em;
+  flex: 1 1 500px;
+}
+.story:hover .story__media:before {
+  opacity: 1;
+}
+@media only screen and (min-width: 800px) {
+  .story {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .story > * {
+    flex: 1 1 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .story {
+    flex: 1 1 200px;
+  }
+}
+
+.story__media {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.story__media:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.story__link {
+  display: inline-block;
+}
+
+.story__title {
+  font-size: 1.4em;
+}
+
+.story__taxonomy {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  padding: 0.4em 0.5em;
+  background: #222;
+}
+
+.story__body,
+.read-more {
+  margin: 0 0.8em;
+}
+
+.story__body p:last-of-type {
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 800px) {
+  .story__body {
+    min-height: 500px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .story__body {
+    min-height: 550px;
+  }
+}
+
+.read-more {
+  flex: 0 1 110px;
+  align-self: flex-end;
+  margin-bottom: 1.5em;
+}
+
+.story__title {
+  margin: 0.2em 0 0 0.6em;
+}
+
+.middle{
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .text{
+    color: #ECF0F1;
+    font-size: 50px;
+    font-family: "montserrat";
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .hidden{
+    max-width: 0;
+    opacity: 0;
+    transition: 0.5s ease-in;
+  }
+  .text:hover .hidden{
+    opacity: 1;
+    max-width: 1em;
+  }
+  #abt{
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    transform: translateY(-50%);
+    color: #BDC0C1;
+    width: 70%;
+  }
